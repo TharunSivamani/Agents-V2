@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PocketTasks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>PocketTasks</h1>
+
+    <div class="row">
+      <input type="text" id="titleInput" placeholder="Task title" />
+      <input type="datetime-local" id="dueInput" />
+    </div>
+
+    <style>
+      .row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+      .row button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        background: #4f8cff;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .row button#addBtn {
+        background: #43c463;
+      }
+      .row button#settingsBtn {
+        background: #f0ad4e;
+      }
+      .row button:hover {
+        filter: brightness(0.9);
+      }
+    </style>
+    <div class="row">
+      <button id="saveBtn" style="display: none">Save</button>
+      <button id="addBtn">➕ Add</button>
+      <button id="settingsBtn">⚙️</button>
+    </div>
+
+    <div id="taskList"></div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
